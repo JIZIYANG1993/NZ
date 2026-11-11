@@ -4,9 +4,10 @@
   const STORAGE_VERSION = 1;
   const DEFAULT_SETTINGS = Object.freeze({
     baseCurrency: "CNY",
-    commonCurrencies: ["EUR", "CHF", "HKD"],
+    commonCurrencies: ["NZD"],
     lastCurrency: "CNY"
   });
+  const ALLOWED_CURRENCY_CODES = new Set(["CNY", "NZD"]);
   const CATEGORIES = Object.freeze(["餐饮", "交通", "住宿", "门票", "购物", "其他"]);
   const AVATAR_COLORS = Object.freeze([
     "#D96C42", "#217D91", "#5C8E62", "#8B6AA8", "#C58B32",
@@ -127,7 +128,9 @@
     return Object.freeze([...byCode.values()].sort((first, second) => first.code.localeCompare(second.code)));
   }
 
-  const CURRENCY_CATALOG = buildCurrencyCatalog(SEEDED_CURRENCY_CATALOG);
+  const CURRENCY_CATALOG = Object.freeze(
+    buildCurrencyCatalog(SEEDED_CURRENCY_CATALOG).filter((currency) => ALLOWED_CURRENCY_CODES.has(currency.code))
+  );
 
   const CURRENCY_BY_CODE = new Map(CURRENCY_CATALOG.map((currency) => [currency.code, currency]));
   const currencySearchText = new Map(CURRENCY_CATALOG.map((currency) => [
@@ -1095,12 +1098,12 @@
           </section>
           <section class="ledger-setting-group">
             <div class="ledger-setting-heading">
-              <div><h3>常用外币</h3><p>只在记账时显示你选中的币种</p></div>
-              <button class="ledger-text-button" type="button" data-ledger-action="pick-common-currency">添加货币</button>
+              <div><h3>可用币种</h3><p>只显示人民币与新西兰元</p></div>
+              <button class="ledger-text-button" type="button" data-ledger-action="pick-common-currency">管理币种</button>
             </div>
             ${ledgerData.settings.commonCurrencies.length
               ? `<div class="ledger-currency-chips">${ledgerData.settings.commonCurrencies.map(renderCurrencyChip).join("")}</div>`
-              : `<p class="ledger-dialog-empty">尚未添加常用外币。</p>`}
+              : `<p class="ledger-dialog-empty">尚未启用新西兰元。</p>`}
           </section>
         </div>
       </dialog>`;
@@ -1131,7 +1134,7 @@
   function renderCurrencyResultsMarkup() {
     const currencies = searchedCurrencies();
     if (!normalizeSearch(currencyQuery)) {
-      return `<div class="ledger-currency-empty"><p>输入货币名称开始查找</p><small>例如：港币、Hong Kong 或 HKD</small></div>`;
+      return `<div class="ledger-currency-empty"><p>输入货币名称开始查找</p><small>例如：人民币、Chinese Yuan、CNY 或 NZD</small></div>`;
     }
     return currencies.length
       ? currencies.map(currencyResultMarkup).join("")
@@ -1143,8 +1146,8 @@
       <dialog class="ledger-dialog ledger-currency-dialog" data-ledger-dialog="currency" aria-labelledby="ledger-currency-dialog-title">
         <div class="ledger-dialog-header">
           <div>
-            <p class="ledger-section-kicker">世界货币</p>
-            <h2 id="ledger-currency-dialog-title">${currencyPickerMode === "base" ? "选择本位币" : "添加常用外币"}</h2>
+            <p class="ledger-section-kicker">可用币种</p>
+            <h2 id="ledger-currency-dialog-title">${currencyPickerMode === "base" ? "选择本位币" : "选择记账币种"}</h2>
           </div>
           <button class="ledger-dialog-close" type="button" data-ledger-action="back-to-settings" aria-label="返回设置">×</button>
         </div>
@@ -1152,9 +1155,9 @@
           <label class="ledger-currency-search">
             <span class="ledger-visually-hidden">搜索货币</span>
             <span aria-hidden="true">⌕</span>
-            <input class="ledger-input" type="search" data-ledger-currency-search placeholder="搜索港币、Hong Kong、HKD…" value="${escapeAttribute(currencyQuery)}" autocomplete="off">
+            <input class="ledger-input" type="search" data-ledger-currency-search placeholder="搜索人民币、NZD…" value="${escapeAttribute(currencyQuery)}" autocomplete="off">
           </label>
-          <p class="ledger-search-help">支持中文名、英文名、代码、符号和国家或地区</p>
+          <p class="ledger-search-help">仅支持人民币（CNY）与新西兰元（NZD）</p>
           <div class="ledger-currency-results" data-ledger-currency-results>${renderCurrencyResultsMarkup()}</div>
         </div>
       </dialog>`;
@@ -1364,7 +1367,7 @@
     const title = dialog.querySelector("#ledger-currency-dialog-title");
     const search = dialog.querySelector("[data-ledger-currency-search]");
     const results = dialog.querySelector("[data-ledger-currency-results]");
-    if (title) title.textContent = mode === "base" ? "选择本位币" : "添加常用外币";
+    if (title) title.textContent = mode === "base" ? "选择本位币" : "选择记账币种";
     if (search) search.value = "";
     if (results) results.innerHTML = renderCurrencyResultsMarkup();
     showDialog("currency", { focusSearch: true });
@@ -1681,7 +1684,7 @@
       if (selected && next.settings.lastCurrency === code) next.settings.lastCurrency = next.settings.baseCurrency;
     }, {
       reason: selected ? "currency-removed" : "currency-added",
-      message: selected ? `${currencyByCode(code).nameZh}已移除` : `${currencyByCode(code).nameZh}已加入常用外币`
+      message: selected ? `${currencyByCode(code).nameZh}已移除` : `${currencyByCode(code).nameZh}已启用`
     });
   }
 
