@@ -1,0 +1,38 @@
+# macOS and editor files
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
+.vscode/
+.idea/
+
+# Environment files and local secrets
+.env
+.env.*
+!.env.example
+.dev.vars
+*.pem
+*.key
+*.p12
+*.pfx
+*.mobileprovision
+
+# Dependencies and build/runtime output
+node_modules/
+dist/
+build/
+coverage/
+.wrangler/
+.cache/
+*.log
+.local-preview-data.json
+
+# Private source material and generated reports
+source-files/
+private/
+source-facts.json
+reports/private/
+
+# Local/generated image workspaces
+.generated_images/
+generated_images/

@@ -1,0 +1,2815 @@
+{
+  "$schema": "./schemas/trip-data.schema.json",
+  "schemaVersion": "2.0-lite",
+  "config": {
+    "schemaVersion": "1.0.0",
+    "modules": {
+      "flights": true,
+      "overview": true,
+      "itinerary": true,
+      "todo": true,
+      "driving": true,
+      "ledger": true
+    },
+    "language": "zh-CN",
+    "persistence": {
+      "mode": "local"
+    }
+  },
+  "metadata": {
+    "tripId": "nz-south-island-campervan-2026-12",
+    "title": "新西兰南岛房车自驾 · 2026",
+    "language": "zh-CN",
+    "timeZone": "Pacific/Auckland",
+    "assets": {
+      "routeMaps": [
+        "assets/maps/custom/nz-south-island-cartoon-geo.svg"
+      ]
+    }
+  },
+  "trip": {
+    "status": "draft",
+    "startDate": "2026-12-04",
+    "endDate": "2026-12-16",
+    "dayCount": 13,
+    "nightCountAway": 12,
+    "countries": [
+      {
+        "code": "NZ",
+        "name": "New Zealand",
+        "nameZh": "新西兰",
+        "nameEn": "NEW ZEALAND"
+      }
+    ],
+    "primaryDestinationCountries": [
+      "NZ"
+    ],
+    "citiesAndAreas": [
+      "Christchurch",
+      "Lake Tekapo",
+      "Lake Pukaki",
+      "Wānaka",
+      "Queenstown",
+      "Dunedin",
+      "Ōamaru",
+      "Akaroa"
+    ],
+    "routeSummary": "基督城 → Tekapo → Lake Pukaki → Wānaka → Queenstown → Dunedin → Ōamaru → Akaroa → 基督城",
+    "groupSize": 3,
+    "primaryDestinationName": "新西兰南岛"
+  },
+  "flightJourneys": [
+    {
+      "id": "journey-akl-chc",
+      "title": "奥克兰 → 基督城",
+      "status": "confirmed"
+    },
+    {
+      "id": "journey-chc-akl",
+      "title": "基督城 → 奥克兰",
+      "status": "confirmed"
+    }
+  ],
+  "flights": [
+    {
+      "id": "flight-jq241",
+      "journeyId": "journey-akl-chc",
+      "sequence": 1,
+      "airline": {
+        "name": "Jetstar",
+        "nameZh": "捷星航空"
+      },
+      "flightNumber": "JQ241",
+      "departure": {
+        "airportCode": "AKL",
+        "city": "奥克兰",
+        "date": "2026-12-04",
+        "time": "19:40",
+        "utcOffset": "+13:00"
+      },
+      "arrival": {
+        "airportCode": "CHC",
+        "city": "基督城",
+        "date": "2026-12-04",
+        "time": "21:05",
+        "utcOffset": "+13:00"
+      }
+    },
+    {
+      "id": "flight-jq240",
+      "journeyId": "journey-chc-akl",
+      "sequence": 1,
+      "airline": {
+        "name": "Jetstar",
+        "nameZh": "捷星航空"
+      },
+      "flightNumber": "JQ240",
+      "departure": {
+        "airportCode": "CHC",
+        "city": "基督城",
+        "date": "2026-12-16",
+        "time": "18:50",
+        "utcOffset": "+13:00"
+      },
+      "arrival": {
+        "airportCode": "AKL",
+        "city": "奥克兰",
+        "date": "2026-12-16",
+        "time": "20:15",
+        "utcOffset": "+13:00"
+      }
+    }
+  ],
+  "accommodations": [
+    {
+      "id": "acc-chch-hotel",
+      "name": "基督城酒店",
+      "city": "Christchurch",
+      "checkIn": "2026-12-04",
+      "checkOut": "2026-12-05",
+      "status": "pending",
+      "note": "酒店名称和地址待补充"
+    },
+    {
+      "id": "acc-tekapo",
+      "name": "Lakes Edge Holiday Park",
+      "city": "Lake Tekapo",
+      "checkIn": "2026-12-05",
+      "checkOut": "2026-12-07",
+      "status": "confirmed",
+      "siteType": "Standard Powered Site",
+      "guests": 3
+    },
+    {
+      "id": "acc-glendhu",
+      "name": "Hampshire Holiday Parks Glendhu Bay",
+      "city": "Wānaka",
+      "checkIn": "2026-12-07",
+      "checkOut": "2026-12-09",
+      "status": "confirmed",
+      "siteType": "Lake View Grass Powered Site",
+      "guests": 3
+    },
+    {
+      "id": "acc-queenstown-lakeview",
+      "name": "Hampshire Holiday Parks Queenstown Lakeview",
+      "city": "Queenstown",
+      "checkIn": "2026-12-09",
+      "checkOut": "2026-12-11",
+      "status": "confirmed",
+      "siteType": "Powered Site",
+      "guests": 3
+    },
+    {
+      "id": "acc-driftaway",
+      "name": "Driftaway Queenstown",
+      "city": "Queenstown",
+      "checkIn": "2026-12-11",
+      "checkOut": "2026-12-12",
+      "status": "confirmed",
+      "siteType": "Premium Lake View Powered Site",
+      "guests": 3
+    },
+    {
+      "id": "acc-dunedin",
+      "name": "Dunedin房车营地",
+      "city": "Dunedin",
+      "checkIn": "2026-12-12",
+      "checkOut": "2026-12-14",
+      "status": "pending",
+      "note": "尚未最终预订"
+    },
+    {
+      "id": "acc-oamaru",
+      "name": "Ōamaru房车营地",
+      "city": "Ōamaru",
+      "checkIn": "2026-12-14",
+      "checkOut": "2026-12-15",
+      "status": "pending",
+      "note": "尚未最终预订"
+    },
+    {
+      "id": "acc-akaroa",
+      "name": "Akaroa房车营地",
+      "city": "Akaroa",
+      "checkIn": "2026-12-15",
+      "checkOut": "2026-12-16",
+      "status": "pending",
+      "note": "尚未最终预订"
+    }
+  ],
+  "groundTransport": {
+    "rentalCar": {
+      "company": "maui / THL",
+      "rentalPeriodDays": 12,
+      "vehicle": {
+        "example": "Beach - 4 Berth",
+        "class": "4人房车"
+      },
+      "unlimitedKilometers": true,
+      "price": {
+        "currency": "NZD",
+        "payAtCounter": 0
+      },
+      "insurance": [
+        "订单含Platinum Pack",
+        "儿童座椅已列入订单",
+        "1位授权驾驶员"
+      ],
+      "pickup": {
+        "date": "2026-12-05",
+        "time": "08:00",
+        "location": "Christchurch Airport THL Branch",
+        "address": "159 Orchard Road, Harewood, Christchurch, 8051",
+        "utcOffset": "+13:00"
+      },
+      "dropoff": {
+        "date": "2026-12-16",
+        "time": "16:30",
+        "timeZoneLabel": "新西兰当地时间",
+        "vehicleReturnPoint": "Christchurch Airport THL Branch, 159 Orchard Road",
+        "deadlineWarning": "订单最晚还车时间为16:30。建议提前完成还车，避免错过机场班车。",
+        "recommendedArrivalTime": "14:00–15:00",
+        "utcOffset": "+13:00"
+      }
+    },
+    "rentalChecklist": [
+      "取车前完成在线登记",
+      "观看Camper Show-through视频",
+      "确认儿童座椅安装",
+      "取车时确认水、电、燃气和排污操作",
+      "还车前加油、清理车内并处理污水和垃圾"
+    ],
+    "drivingNotes": [
+      "新西兰靠左行驶",
+      "地图距离不等于实际驾驶时间，山路和单车道桥需要放慢",
+      "单一驾驶员连续驾驶时每约2小时安排休息",
+      "疲劳或天气变化时优先缩短当天行程",
+      "不要在驾驶中使用手持手机",
+      "12月16日目标14:00–15:00完成还车，15:00左右乘班车去机场"
+    ],
+    "drivingReferenceLinks": [
+      {
+        "label": "NZTA新西兰驾车信息",
+        "url": "https://www.nzta.govt.nz/driver-licences/new-residents-and-visitors/"
+      },
+      {
+        "label": "NZTA Journey Planner",
+        "url": "https://www.journeys.nzta.govt.nz/"
+      }
+    ],
+    "plannedRoadLegs": [
+      {
+        "date": "2026-12-05",
+        "from": "Christchurch",
+        "to": "Lake Tekapo",
+        "plannedDriving": "3.5–4小时含休息"
+      },
+      {
+        "date": "2026-12-07",
+        "from": "Lake Tekapo",
+        "to": "Wānaka",
+        "plannedDriving": "4–5小时含停留"
+      },
+      {
+        "date": "2026-12-09",
+        "from": "Wānaka",
+        "to": "Queenstown",
+        "plannedDriving": "约2小时含休息"
+      },
+      {
+        "date": "2026-12-12",
+        "from": "Queenstown",
+        "to": "Dunedin",
+        "plannedDriving": "4.5–5小时含休息"
+      },
+      {
+        "date": "2026-12-14",
+        "from": "Dunedin",
+        "to": "Ōamaru",
+        "plannedDriving": "2–3小时含停留"
+      },
+      {
+        "date": "2026-12-15",
+        "from": "Ōamaru",
+        "to": "Akaroa",
+        "plannedDriving": "5–6小时含休息和午餐"
+      },
+      {
+        "date": "2026-12-16",
+        "from": "Akaroa",
+        "to": "Christchurch THL Branch",
+        "plannedDriving": "约2小时含房车缓冲"
+      }
+    ],
+    "publicTransitAndRail": []
+  },
+  "days": [
+    {
+      "id": "day-1",
+      "day": 1,
+      "date": "2026-12-04",
+      "title": "抵达基督城",
+      "locations": [
+        "基督城"
+      ],
+      "schedule": [
+        {
+          "id": "d1-flight",
+          "time": "19:40",
+          "type": "flight",
+          "text": "JQ241 奥克兰 → 基督城，预计21:05抵达。航班时间以订单截图为准。"
+        },
+        {
+          "id": "d1-hotel",
+          "time": "21:30",
+          "type": "check-in",
+          "text": "基督城酒店入住 · 酒店名称和地址待补充。",
+          "placeIds": [
+            "christchurch"
+          ]
+        },
+        {
+          "id": "d1-food",
+          "time": "22:00",
+          "type": "restaurant",
+          "text": "餐厅候选（现场选择）：Little High Eatery、Riverside Market、Base Woodfired Pizza Christchurch",
+          "placeIds": [
+            "restaurant-little-high-eatery",
+            "restaurant-riverside-market",
+            "restaurant-base-woodfired-pizza-christchurch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day-2",
+      "day": 2,
+      "date": "2026-12-05",
+      "title": "基督城取房车，前往Tekapo",
+      "locations": [
+        "基督城",
+        "Tekapo"
+      ],
+      "schedule": [
+        {
+          "id": "d2-pickup",
+          "time": "08:00",
+          "type": "check-in",
+          "text": "THL基督城门店取房车，办理手续、车辆教学和儿童座椅确认。",
+          "placeIds": [
+            "christchurch"
+          ]
+        },
+        {
+          "id": "d2-grocery",
+          "time": "09:30",
+          "type": "drive",
+          "text": "采购饮水、早餐、房车食材和幼儿用品。",
+          "placeIds": [
+            "christchurch"
+          ]
+        },
+        {
+          "id": "d2-drive",
+          "time": "10:30",
+          "type": "drive",
+          "text": "基督城 → Tekapo，按约3.5–4小时含休息安排。",
+          "placeIds": [
+            "christchurch",
+            "tekapo"
+          ]
+        },
+        {
+          "id": "d2-camp",
+          "time": "14:30–15:30",
+          "type": "check-in",
+          "text": "Lakes Edge Holiday Park入住，订单确认住12月5日至7日。",
+          "placeIds": [
+            "tekapo"
+          ]
+        },
+        {
+          "id": "d2-food",
+          "time": "18:00",
+          "type": "restaurant",
+          "text": "餐厅候选（现场选择）：Blue Lake Eatery & Bar、Kohan Japanese Restaurant、Mackenzies Bar & Grill、25 Degrees Burger Bar",
+          "placeIds": [
+            "restaurant-blue-lake-eatery-and-bar",
+            "restaurant-kohan-japanese-restaurant",
+            "restaurant-mackenzies-bar-and-grill",
+            "restaurant-25-degrees-burger-bar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day-3",
+      "day": 3,
+      "date": "2026-12-06",
+      "title": "Tekapo湖区慢游",
+      "locations": [
+        "Tekapo"
+      ],
+      "schedule": [
+        {
+          "id": "d3-play",
+          "time": "09:30",
+          "type": "attraction",
+          "text": "Tekapo湖畔儿童playground，安排30–60分钟。",
+          "placeIds": [
+            "tekapo"
+          ]
+        },
+        {
+          "id": "d3-lake",
+          "time": "11:00",
+          "type": "walk",
+          "text": "好牧羊人教堂、湖畔散步和轻量拍照。",
+          "placeIds": [
+            "tekapo"
+          ]
+        },
+        {
+          "id": "d3-food",
+          "time": "12:30",
+          "type": "restaurant",
+          "text": "餐厅候选（现场选择）：Blue Lake Eatery & Bar、Kohan Japanese Restaurant、Mackenzies Bar & Grill、25 Degrees Burger Bar",
+          "placeIds": [
+            "restaurant-blue-lake-eatery-and-bar",
+            "restaurant-kohan-japanese-restaurant",
+            "restaurant-mackenzies-bar-and-grill",
+            "restaurant-25-degrees-burger-bar"
+          ]
+        },
+        {
+          "id": "d3-ticket",
+          "time": "19:30",
+          "type": "attraction",
+          "text": "可选星空活动，Dark Sky Project或Tekapo Springs星空体验。2岁半幼儿是否参加按当天状态决定。",
+          "placeIds": [
+            "tekapo"
+          ],
+          "ticketIds": [
+            "ticket-dark-sky",
+            "ticket-tekapo-springs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day-4",
+      "day": 4,
+      "date": "2026-12-07",
+      "title": "Tekapo经Pukaki前往Wānaka",
+      "locations": [
+        "Tekapo",
+        "Lake Pukaki",
+        "Wānaka"
+      ],
+      "schedule": [
+        {
+          "id": "d4-checkout",
+          "time": "08:00",
+          "type": "check-out",
+          "text": "Tekapo营地退房，整理房车。",
+          "placeIds": [
+            "tekapo"
+          ]
+        },
+        {
+          "id": "d4-drive",
+          "time": "09:00",
+          "type": "drive",
+          "text": "Tekapo → Lake Pukaki → Wānaka，按4–5小时含停留安排。",
+          "placeIds": [
+            "tekapo",
+            "pukaki",
+            "wanaka"
+          ]
+        },
+        {
+          "id": "d4-stop",
+          "time": "11:00",
+          "type": "walk",
+          "text": "Lake Pukaki短暂停留，视天气和孩子状态决定。",
+          "placeIds": [
+            "pukaki"
+          ]
+        },
+        {
+          "id": "d4-camp",
+          "time": "14:00–15:00",
+          "type": "check-in",
+          "text": "Hampshire Holiday Parks Glendhu Bay入住，订单确认住12月7日至9日。",
+          "placeIds": [
+            "wanaka"
+          ]
+        },
+        {
+          "id": "d4-food",
+          "time": "18:00",
+          "type": "restaurant",
+          "text": "餐厅候选（现场选择）：Big Fig、Kai Whakapai、Federal Diner、Kika",
+          "placeIds": [
+            "restaurant-big-fig",
+            "restaurant-kai-whakapai",
+            "restaurant-federal-diner",
+            "restaurant-kika"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day-5",
+      "day": 5,
+      "date": "2026-12-08",
+      "title": "Wānaka亲子湖区日",
+      "locations": [
+        "Wānaka"
+      ],
+      "schedule": [
+        {
+          "id": "d5-play",
+          "time": "09:30",
+          "type": "attraction",
+          "text": "Wānaka Lakefront Rotary Playground和湖边散步。",
+          "placeIds": [
+            "wanaka"
+          ]
+        },
+        {
+          "id": "d5-lake",
+          "time": "11:30",
+          "type": "walk",
+          "text": "湖畔、孤独树和轻松拍照。",
+          "placeIds": [
+            "wanaka"
+          ]
+        },
+        {
+          "id": "d5-food",
+          "time": "12:30",
+          "type": "restaurant",
+          "text": "餐厅候选（现场选择）：Big Fig、Kai Whakapai、Federal Diner、Kika",
+          "placeIds": [
+            "restaurant-big-fig",
+            "restaurant-kai-whakapai",
+            "restaurant-federal-diner",
+            "restaurant-kika"
+          ]
+        },
+        {
+          "id": "d5-ticket",
+          "time": "14:30",
+          "type": "attraction",
+          "text": "可选Puzzling World或Lake Wānaka短途游船，门票按现场和预约情况决定。",
+          "placeIds": [
+            "wanaka"
+          ],
+          "ticketIds": [
+            "ticket-puzzling-world",
+            "ticket-wanaka-cruise"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day-6",
+      "day": 6,
+      "date": "2026-12-09",
+      "title": "Wānaka前往Queenstown",
+      "locations": [
+        "Wānaka",
+        "Queenstown"
+      ],
+      "schedule": [
+        {
+          "id": "d6-checkout",
+          "time": "09:00",
+          "type": "check-out",
+          "text": "Glendhu Bay退房，补水并检查儿童用品。",
+          "placeIds": [
+            "wanaka"
+          ]
+        },
+        {
+          "id": "d6-drive",
+          "time": "10:00",
+          "type": "drive",
+          "text": "Wānaka → Queenstown，预留途中休息和午餐。",
+          "placeIds": [
+            "wanaka",
+            "queenstown"
+          ]
+        },
+        {
+          "id": "d6-camp",
+          "time": "15:00",
+          "type": "check-in",
+          "text": "Hampshire Holiday Parks Queenstown Lakeview入住，订单确认住12月9日至11日。",
+          "placeIds": [
+            "queenstown"
+          ]
+        },
+        {
+          "id": "d6-food",
+          "time": "18:00",
+          "type": "restaurant",
+          "text": "餐厅候选（现场选择）：Blue Kanu、Flame Bar and Grill、Fergburger、Erik’s Fish and Chips",
+          "placeIds": [
+            "restaurant-blue-kanu",
+            "restaurant-flame-bar-and-grill",
+            "restaurant-fergburger",
+            "restaurant-eriks-fish-and-chips"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day-7",
+      "day": 7,
+      "date": "2026-12-10",
+      "title": "Queenstown湖滨和亲子活动",
+      "locations": [
+        "Queenstown"
+      ],
+      "schedule": [
+        {
+          "id": "d7-play",
+          "time": "10:00",
+          "type": "attraction",
+          "text": "Queenstown Gardens Playground和湖滨步道。",
+          "placeIds": [
+            "queenstown"
+          ]
+        },
+        {
+          "id": "d7-town",
+          "time": "12:00",
+          "type": "walk",
+          "text": "Queenstown市区、湖滨和午餐。",
+          "placeIds": [
+            "queenstown"
+          ]
+        },
+        {
+          "id": "d7-food",
+          "time": "12:30",
+          "type": "restaurant",
+          "text": "餐厅候选（现场选择）：Blue Kanu、Flame Bar and Grill、Fergburger、Erik’s Fish and Chips",
+          "placeIds": [
+            "restaurant-blue-kanu",
+            "restaurant-flame-bar-and-grill",
+            "restaurant-fergburger",
+            "restaurant-eriks-fish-and-chips"
+          ]
+        },
+        {
+          "id": "d7-ticket",
+          "time": "14:30",
+          "type": "attraction",
+          "text": "Skyline Queenstown Gondola + Stratosfare观景/用餐，作为当天主要活动；2岁半幼儿不安排Luge，需提前购票。",
+          "placeIds": [
+            "queenstown"
+          ],
+          "ticketIds": [
+            "ticket-skyline"
+          ]
+        },
+        {
+          "id": "d7-cruise",
+          "time": "17:00",
+          "type": "attraction",
+          "text": "可选Queenstown湖上游船，按当天体力和天气决定，需另行购票。",
+          "placeIds": [
+            "queenstown"
+          ],
+          "ticketIds": [
+            "ticket-queenstown-cruise"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day-8",
+      "day": 8,
+      "date": "2026-12-11",
+      "title": "Queenstown换营地",
+      "locations": [
+        "Queenstown"
+      ],
+      "schedule": [
+        {
+          "id": "d8-checkout",
+          "time": "10:00",
+          "type": "check-out",
+          "text": "Hampshire Queenstown Lakeview退房。",
+          "placeIds": [
+            "queenstown"
+          ]
+        },
+        {
+          "id": "d8-play",
+          "time": "11:00",
+          "type": "attraction",
+          "text": "Bathhouse Playground或St Omer Park，作为轻量亲子活动。",
+          "placeIds": [
+            "queenstown"
+          ]
+        },
+        {
+          "id": "d8-food",
+          "time": "12:30",
+          "type": "restaurant",
+          "text": "餐厅候选（现场选择）：Blue Kanu、Flame Bar and Grill、Fergburger、Erik’s Fish and Chips",
+          "placeIds": [
+            "restaurant-blue-kanu",
+            "restaurant-flame-bar-and-grill",
+            "restaurant-fergburger",
+            "restaurant-eriks-fish-and-chips"
+          ]
+        },
+        {
+          "id": "d8-camp",
+          "time": "14:00",
+          "type": "check-in",
+          "text": "Driftaway Queenstown入住，订单确认住12月11日至12日。",
+          "placeIds": [
+            "queenstown"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day-9",
+      "day": 9,
+      "date": "2026-12-12",
+      "title": "Queenstown前往Dunedin",
+      "locations": [
+        "Queenstown",
+        "Dunedin"
+      ],
+      "schedule": [
+        {
+          "id": "d9-drive",
+          "time": "09:00",
+          "type": "drive",
+          "text": "Queenstown → Dunedin，按4.5–5小时含休息安排。",
+          "placeIds": [
+            "queenstown",
+            "dunedin"
+          ]
+        },
+        {
+          "id": "d9-camp",
+          "time": "14:00–15:00",
+          "type": "check-in",
+          "text": "Dunedin房车营地 · 待预订。",
+          "placeIds": [
+            "dunedin"
+          ]
+        },
+        {
+          "id": "d9-food",
+          "time": "18:00",
+          "type": "restaurant",
+          "text": "餐厅候选（现场选择）：The Esplanade、No. 7 Balmac、Ironic Cafe & Bar、Emerson’s Taproom Restaurant",
+          "placeIds": [
+            "restaurant-the-esplanade",
+            "restaurant-no.-7-balmac",
+            "restaurant-ironic-cafe-and-bar",
+            "restaurant-emersons-taproom-restaurant"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day-10",
+      "day": 10,
+      "date": "2026-12-13",
+      "title": "Dunedin城市和亲子活动",
+      "locations": [
+        "Dunedin"
+      ],
+      "schedule": [
+        {
+          "id": "d10-play",
+          "time": "10:00",
+          "type": "attraction",
+          "text": "Dunedin Botanic Garden Play Trail、Arthur Street Playground或Marlow Park三选一。",
+          "placeIds": [
+            "dunedin"
+          ]
+        },
+        {
+          "id": "d10-town",
+          "time": "12:00",
+          "type": "walk",
+          "text": "市区、火车站或St Clair海滩，按天气选择。",
+          "placeIds": [
+            "dunedin"
+          ]
+        },
+        {
+          "id": "d10-food",
+          "time": "12:30",
+          "type": "restaurant",
+          "text": "餐厅候选（现场选择）：The Esplanade、No. 7 Balmac、Ironic Cafe & Bar、Emerson’s Taproom Restaurant",
+          "placeIds": [
+            "restaurant-the-esplanade",
+            "restaurant-no.-7-balmac",
+            "restaurant-ironic-cafe-and-bar",
+            "restaurant-emersons-taproom-restaurant"
+          ]
+        },
+        {
+          "id": "d10-ticket",
+          "time": "15:00",
+          "type": "attraction",
+          "text": "可选Blue Penguins Pukekura或Royal Albatross Centre，门票建议提前预订。",
+          "placeIds": [
+            "dunedin"
+          ],
+          "ticketIds": [
+            "ticket-pukekura",
+            "ticket-albatross"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day-11",
+      "day": 11,
+      "date": "2026-12-14",
+      "title": "Dunedin前往Ōamaru",
+      "locations": [
+        "Dunedin",
+        "Ōamaru"
+      ],
+      "schedule": [
+        {
+          "id": "d11-drive",
+          "time": "10:00",
+          "type": "drive",
+          "text": "Dunedin → Ōamaru，按2–3小时含停留安排。",
+          "placeIds": [
+            "dunedin",
+            "oamaru"
+          ]
+        },
+        {
+          "id": "d11-camp",
+          "time": "13:00–14:00",
+          "type": "check-in",
+          "text": "Ōamaru房车营地 · 待预订。",
+          "placeIds": [
+            "oamaru"
+          ]
+        },
+        {
+          "id": "d11-play",
+          "time": "14:30",
+          "type": "attraction",
+          "text": "Oamaru Public Gardens Playground和花园散步。",
+          "placeIds": [
+            "oamaru"
+          ]
+        },
+        {
+          "id": "d11-penguin",
+          "time": "19:00",
+          "type": "attraction",
+          "text": "可选Ōamaru Blue Penguin Colony晚间观赏，需提前预订；结束较晚，先确认幼儿作息和返回营地安排。",
+          "placeIds": [
+            "oamaru"
+          ],
+          "ticketIds": [
+            "ticket-oamaru-penguins"
+          ]
+        },
+        {
+          "id": "d11-food",
+          "time": "18:00",
+          "type": "restaurant",
+          "text": "餐厅候选（现场选择）：Cucina、Riverstone Kitchen、Scampi’s Seafood、The Criterion Hotel",
+          "placeIds": [
+            "restaurant-cucina",
+            "restaurant-riverstone-kitchen",
+            "restaurant-scampis-seafood",
+            "restaurant-the-criterion-hotel"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day-12",
+      "day": 12,
+      "date": "2026-12-15",
+      "title": "Ōamaru前往Akaroa",
+      "locations": [
+        "Ōamaru",
+        "Akaroa"
+      ],
+      "schedule": [
+        {
+          "id": "d12-drive",
+          "time": "08:30",
+          "type": "drive",
+          "text": "Ōamaru → Akaroa，纯驾驶约3小时40分钟，按5–6小时含休息和午餐安排。",
+          "placeIds": [
+            "oamaru",
+            "akaroa"
+          ]
+        },
+        {
+          "id": "d12-camp",
+          "time": "14:00–15:00",
+          "type": "check-in",
+          "text": "Akaroa房车营地 · 待预订。",
+          "placeIds": [
+            "akaroa"
+          ]
+        },
+        {
+          "id": "d12-play",
+          "time": "15:30",
+          "type": "attraction",
+          "text": "Garden of Tāne playground和短步道。",
+          "placeIds": [
+            "akaroa"
+          ]
+        },
+        {
+          "id": "d12-food",
+          "time": "18:00",
+          "type": "restaurant",
+          "text": "餐厅候选（现场选择）：Bully Hayes Restaurant & Bar、L’Escargot Rouge Deli Café、Ma Maison、The Common",
+          "placeIds": [
+            "restaurant-bully-hayes-restaurant-and-bar",
+            "restaurant-lescargot-rouge-deli-café",
+            "restaurant-ma-maison",
+            "restaurant-the-common"
+          ]
+        },
+        {
+          "id": "d12-ticket",
+          "time": "19:00",
+          "type": "attraction",
+          "text": "可选Akaroa Harbour Nature Cruise，需提前查看班次和预订。",
+          "placeIds": [
+            "akaroa"
+          ],
+          "ticketIds": [
+            "ticket-akaroa-cruise"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day-13",
+      "day": 13,
+      "date": "2026-12-16",
+      "title": "Akaroa返回基督城并搭机",
+      "locations": [
+        "Akaroa",
+        "Christchurch"
+      ],
+      "schedule": [
+        {
+          "id": "d13-pack",
+          "time": "07:00",
+          "type": "check-out",
+          "text": "早餐、整理行李、清理房车。",
+          "placeIds": [
+            "akaroa"
+          ]
+        },
+        {
+          "id": "d13-drive",
+          "time": "08:30",
+          "type": "return",
+          "text": "Akaroa → 基督城机场区域，按2小时含房车行驶缓冲安排。",
+          "placeIds": [
+            "akaroa",
+            "christchurch"
+          ]
+        },
+        {
+          "id": "d13-return",
+          "time": "11:00–14:00",
+          "type": "return",
+          "text": "加油、处理房车归还事项，目标14:00–15:00完成还车。",
+          "placeIds": [
+            "christchurch"
+          ]
+        },
+        {
+          "id": "d13-shuttle",
+          "time": "15:00",
+          "type": "transfer",
+          "text": "乘THL门店班车前往机场，目标15:15–15:30抵达。",
+          "placeIds": [
+            "christchurch"
+          ]
+        },
+        {
+          "id": "d13-flight",
+          "time": "18:50",
+          "type": "flight",
+          "text": "JQ240 基督城 → 奥克兰，预计20:15抵达。"
+        },
+        {
+          "id": "d13-food",
+          "time": "11:30",
+          "type": "restaurant",
+          "text": "餐厅候选（现场选择）：Bully Hayes Restaurant & Bar、L’Escargot Rouge Deli Café、Ma Maison、The Common",
+          "placeIds": [
+            "restaurant-bully-hayes-restaurant-and-bar",
+            "restaurant-lescargot-rouge-deli-café",
+            "restaurant-ma-maison",
+            "restaurant-the-common"
+          ]
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "id": "christchurch",
+      "name": "Christchurch",
+      "nameZh": "基督城",
+      "cityOrArea": "Christchurch",
+      "countryCode": "NZ",
+      "geo": {
+        "lat": -43.5321,
+        "lng": 172.6362
+      },
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Christchurch%2C+Christchurch%2C+New+Zealand"
+    },
+    {
+      "id": "tekapo",
+      "name": "Lake Tekapo",
+      "nameZh": "Tekapo",
+      "cityOrArea": "Lake Tekapo",
+      "countryCode": "NZ",
+      "geo": {
+        "lat": -44.0046,
+        "lng": 170.4771
+      },
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Lake+Tekapo%2C+Lake+Tekapo%2C+New+Zealand"
+    },
+    {
+      "id": "pukaki",
+      "name": "Lake Pukaki",
+      "nameZh": "Lake Pukaki",
+      "cityOrArea": "Mackenzie Basin",
+      "countryCode": "NZ",
+      "geo": {
+        "lat": -44.1714,
+        "lng": 170.1331
+      },
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Lake+Pukaki%2C+New+Zealand%2C+New+Zealand"
+    },
+    {
+      "id": "wanaka",
+      "name": "Wānaka",
+      "nameZh": "瓦纳卡",
+      "cityOrArea": "Wānaka",
+      "countryCode": "NZ",
+      "geo": {
+        "lat": -44.7002,
+        "lng": 169.132
+      },
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=W%C4%81naka%2C+W%C4%81naka%2C+New+Zealand"
+    },
+    {
+      "id": "queenstown",
+      "name": "Queenstown",
+      "nameZh": "皇后镇",
+      "cityOrArea": "Queenstown",
+      "countryCode": "NZ",
+      "geo": {
+        "lat": -45.0312,
+        "lng": 168.6626
+      },
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Queenstown%2C+Queenstown%2C+New+Zealand"
+    },
+    {
+      "id": "dunedin",
+      "name": "Dunedin",
+      "nameZh": "但尼丁",
+      "cityOrArea": "Dunedin",
+      "countryCode": "NZ",
+      "geo": {
+        "lat": -45.8788,
+        "lng": 170.5028
+      },
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Dunedin%2C+Dunedin%2C+New+Zealand"
+    },
+    {
+      "id": "oamaru",
+      "name": "Ōamaru",
+      "nameZh": "奥马鲁",
+      "cityOrArea": "Ōamaru",
+      "countryCode": "NZ",
+      "geo": {
+        "lat": -45.097,
+        "lng": 170.97
+      },
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Oamaru%2C+Oamaru%2C+New+Zealand"
+    },
+    {
+      "id": "akaroa",
+      "name": "Akaroa",
+      "nameZh": "阿卡罗阿",
+      "cityOrArea": "Akaroa",
+      "countryCode": "NZ",
+      "geo": {
+        "lat": -43.804,
+        "lng": 172.968
+      },
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Akaroa%2C+Akaroa%2C+New+Zealand"
+    }
+  ],
+  "restaurants": [
+    {
+      "id": "restaurant-little-high-eatery",
+      "name": "Little High Eatery",
+      "city": "Christchurch",
+      "style": "多厨房美食市集，适合抵达日快速选择",
+      "status": "candidate",
+      "selectionNote": "现场选择，出发前核对营业时间和节假日安排",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Little+High+Eatery%2C+Christchurch%2C+New+Zealand"
+    },
+    {
+      "id": "restaurant-riverside-market",
+      "name": "Riverside Market",
+      "city": "Christchurch",
+      "style": "河畔室内市集，多家本地摊位",
+      "status": "candidate",
+      "selectionNote": "现场选择，出发前核对营业时间和节假日安排",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Riverside+Market%2C+Christchurch%2C+New+Zealand"
+    },
+    {
+      "id": "restaurant-base-woodfired-pizza-christchurch",
+      "name": "Base Woodfired Pizza Christchurch",
+      "city": "Christchurch",
+      "style": "木火披萨，口味选择直接",
+      "status": "candidate",
+      "selectionNote": "现场选择，出发前核对营业时间和节假日安排",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Base+Woodfired+Pizza+Christchurch%2C+Christchurch%2C+New+Zealand"
+    },
+    {
+      "id": "restaurant-blue-lake-eatery-and-bar",
+      "name": "Blue Lake Eatery & Bar",
+      "city": "Lake Tekapo",
+      "style": "湖畔休闲餐厅，现代新西兰菜",
+      "status": "candidate",
+      "selectionNote": "现场选择，出发前核对营业时间和节假日安排",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Blue+Lake+Eatery+%26+Bar%2C+Lake+Tekapo%2C+New+Zealand"
+    },
+    {
+      "id": "restaurant-kohan-japanese-restaurant",
+      "name": "Kohan Japanese Restaurant",
+      "city": "Lake Tekapo",
+      "style": "寿司、刺身和日式料理",
+      "status": "candidate",
+      "selectionNote": "现场选择，出发前核对营业时间和节假日安排",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kohan+Japanese+Restaurant%2C+Lake+Tekapo%2C+New+Zealand"
+    },
+    {
+      "id": "restaurant-mackenzies-bar-and-grill",
+      "name": "Mackenzies Bar & Grill",
+      "city": "Lake Tekapo",
+      "style": "湖景烧烤和咖啡馆",
+      "status": "candidate",
+      "selectionNote": "现场选择，出发前核对营业时间和节假日安排",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Mackenzies+Bar+%26+Grill%2C+Lake+Tekapo%2C+New+Zealand"
+    },
+    {
+      "id": "restaurant-25-degrees-burger-bar",
+      "name": "25 Degrees Burger Bar",
+      "city": "Lake Tekapo",
+      "style": "汉堡和轻松快餐",
+      "status": "candidate",
+      "selectionNote": "现场选择，出发前核对营业时间和节假日安排",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=25+Degrees+Burger+Bar%2C+Lake+Tekapo%2C+New+Zealand"
+    },
+    {
+      "id": "restaurant-big-fig",
+      "name": "Big Fig",
+      "city": "Wānaka",
+      "style": "慢食、地中海和中东风味",
+      "status": "candidate",
+      "selectionNote": "现场选择，出发前核对营业时间和节假日安排",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Big+Fig%2C+W%C4%81naka%2C+New+Zealand"
+    },
+    {
+      "id": "restaurant-kai-whakapai",
+      "name": "Kai Whakapai",
+      "city": "Wānaka",
+      "style": "湖边咖啡、酒吧和轻食",
+      "status": "candidate",
+      "selectionNote": "现场选择，出发前核对营业时间和节假日安排",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kai+Whakapai%2C+W%C4%81naka%2C+New+Zealand"
+    },
+    {
+      "id": "restaurant-federal-diner",
+      "name": "Federal Diner",
+      "city": "Wānaka",
+      "style": "本地早餐和季节性餐点",
+      "status": "candidate",
+      "selectionNote": "现场选择，出发前核对营业时间和节假日安排",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Federal+Diner%2C+W%C4%81naka%2C+New+Zealand"
+    },
+    {
+      "id": "restaurant-kika",
+      "name": "Kika",
+      "city": "Wānaka",
+      "style": "分享式创意料理",
+      "status": "candidate",
+      "selectionNote": "现场选择，出发前核对营业时间和节假日安排",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kika%2C+W%C4%81naka%2C+New+Zealand"
+    },
+    {
+      "id": "restaurant-blue-kanu",
+      "name": "Blue Kanu",
+      "city": "Queenstown",
+      "style": "太平洋与亚洲融合料理",
+      "status": "candidate",
+      "selectionNote": "现场选择，出发前核对营业时间和节假日安排",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Blue+Kanu%2C+Queenstown%2C+New+Zealand"
+    },
+    {
+      "id": "restaurant-flame-bar-and-grill",
+      "name": "Flame Bar and Grill",
+      "city": "Queenstown",
+      "style": "南非炭烤和肉类料理",
+      "status": "candidate",
+      "selectionNote": "现场选择，出发前核对营业时间和节假日安排",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Flame+Bar+and+Grill%2C+Queenstown%2C+New+Zealand"
+    },
+    {
+      "id": "restaurant-fergburger",
+      "name": "Fergburger",
+      "city": "Queenstown",
+      "style": "皇后镇代表性汉堡",
+      "status": "candidate",
+      "selectionNote": "现场选择，出发前核对营业时间和节假日安排",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Fergburger%2C+Queenstown%2C+New+Zealand"
+    },
+    {
+      "id": "restaurant-eriks-fish-and-chips",
+      "name": "Erik’s Fish and Chips",
+      "city": "Queenstown",
+      "style": "现点现做炸鱼薯条",
+      "status": "candidate",
+      "selectionNote": "现场选择，出发前核对营业时间和节假日安排",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Erik%E2%80%99s+Fish+and+Chips%2C+Queenstown%2C+New+Zealand"
+    },
+    {
+      "id": "restaurant-the-esplanade",
+      "name": "The Esplanade",
+      "city": "Dunedin",
+      "style": "St Clair海滩边意式料理和披萨",
+      "status": "candidate",
+      "selectionNote": "现场选择，出发前核对营业时间和节假日安排",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Esplanade%2C+Dunedin%2C+New+Zealand"
+    },
+    {
+      "id": "restaurant-no.-7-balmac",
+      "name": "No. 7 Balmac",
+      "city": "Dunedin",
+      "style": "本地食材和木火料理",
+      "status": "candidate",
+      "selectionNote": "现场选择，出发前核对营业时间和节假日安排",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=No.+7+Balmac%2C+Dunedin%2C+New+Zealand"
+    },
+    {
+      "id": "restaurant-ironic-cafe-and-bar",
+      "name": "Ironic Cafe & Bar",
+      "city": "Dunedin",
+      "style": "咖啡、酒吧和轻松正餐",
+      "status": "candidate",
+      "selectionNote": "现场选择，出发前核对营业时间和节假日安排",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ironic+Cafe+%26+Bar%2C+Dunedin%2C+New+Zealand"
+    },
+    {
+      "id": "restaurant-emersons-taproom-restaurant",
+      "name": "Emerson’s Taproom Restaurant",
+      "city": "Dunedin",
+      "style": "本地啤酒和分享式餐点",
+      "status": "candidate",
+      "selectionNote": "现场选择，出发前核对营业时间和节假日安排",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Emerson%E2%80%99s+Taproom+Restaurant%2C+Dunedin%2C+New+Zealand"
+    },
+    {
+      "id": "restaurant-cucina",
+      "name": "Cucina",
+      "city": "Ōamaru",
+      "style": "本地食材和区域风味料理",
+      "status": "candidate",
+      "selectionNote": "现场选择，出发前核对营业时间和节假日安排",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cucina%2C+%C5%8Camaru%2C+New+Zealand"
+    },
+    {
+      "id": "restaurant-riverstone-kitchen",
+      "name": "Riverstone Kitchen",
+      "city": "Ōamaru",
+      "style": "农场餐厅，适合午餐顺路安排",
+      "status": "candidate",
+      "selectionNote": "现场选择，出发前核对营业时间和节假日安排",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Riverstone+Kitchen%2C+%C5%8Camaru%2C+New+Zealand"
+    },
+    {
+      "id": "restaurant-scampis-seafood",
+      "name": "Scampi’s Seafood",
+      "city": "Ōamaru",
+      "style": "海鲜和海港风味",
+      "status": "candidate",
+      "selectionNote": "现场选择，出发前核对营业时间和节假日安排",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Scampi%E2%80%99s+Seafood%2C+%C5%8Camaru%2C+New+Zealand"
+    },
+    {
+      "id": "restaurant-the-criterion-hotel",
+      "name": "The Criterion Hotel",
+      "city": "Ōamaru",
+      "style": "历史建筑内的传统餐厅",
+      "status": "candidate",
+      "selectionNote": "现场选择，出发前核对营业时间和节假日安排",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Criterion+Hotel%2C+%C5%8Camaru%2C+New+Zealand"
+    },
+    {
+      "id": "restaurant-bully-hayes-restaurant-and-bar",
+      "name": "Bully Hayes Restaurant & Bar",
+      "city": "Akaroa",
+      "style": "港湾景观餐厅",
+      "status": "candidate",
+      "selectionNote": "现场选择，出发前核对营业时间和节假日安排",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Bully+Hayes+Restaurant+%26+Bar%2C+Akaroa%2C+New+Zealand"
+    },
+    {
+      "id": "restaurant-lescargot-rouge-deli-café",
+      "name": "L’Escargot Rouge Deli Café",
+      "city": "Akaroa",
+      "style": "法式熟食和咖啡",
+      "status": "candidate",
+      "selectionNote": "现场选择，出发前核对营业时间和节假日安排",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=L%E2%80%99Escargot+Rouge+Deli+Caf%C3%A9%2C+Akaroa%2C+New+Zealand"
+    },
+    {
+      "id": "restaurant-ma-maison",
+      "name": "Ma Maison",
+      "city": "Akaroa",
+      "style": "法式海港小餐馆",
+      "status": "candidate",
+      "selectionNote": "现场选择，出发前核对营业时间和节假日安排",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ma+Maison%2C+Akaroa%2C+New+Zealand"
+    },
+    {
+      "id": "restaurant-the-common",
+      "name": "The Common",
+      "city": "Akaroa",
+      "style": "轻松的本地餐饮选择",
+      "status": "candidate",
+      "selectionNote": "现场选择，出发前核对营业时间和节假日安排",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Common%2C+Akaroa%2C+New+Zealand"
+    }
+  ],
+  "bookingsAndTickets": [
+    {
+      "id": "booking-thl",
+      "type": "rental-car",
+      "name": "maui / THL Beach 4 Berth房车",
+      "status": "confirmed",
+      "dateRange": "2026-12-05至2026-12-16"
+    },
+    {
+      "id": "booking-tekapo",
+      "type": "accommodation",
+      "name": "Lakes Edge Holiday Park",
+      "status": "confirmed",
+      "dateRange": "2026-12-05至2026-12-07"
+    },
+    {
+      "id": "booking-glendhu",
+      "type": "accommodation",
+      "name": "Hampshire Holiday Parks Glendhu Bay",
+      "status": "confirmed",
+      "dateRange": "2026-12-07至2026-12-09"
+    },
+    {
+      "id": "booking-queenstown-lakeview",
+      "type": "accommodation",
+      "name": "Hampshire Holiday Parks Queenstown Lakeview",
+      "status": "confirmed",
+      "dateRange": "2026-12-09至2026-12-11"
+    },
+    {
+      "id": "booking-driftaway",
+      "type": "accommodation",
+      "name": "Driftaway Queenstown",
+      "status": "confirmed",
+      "dateRange": "2026-12-11至2026-12-12"
+    },
+    {
+      "id": "booking-dunedin",
+      "type": "accommodation",
+      "name": "Dunedin房车营地",
+      "status": "pending"
+    },
+    {
+      "id": "booking-oamaru",
+      "type": "accommodation",
+      "name": "Ōamaru房车营地",
+      "status": "pending"
+    },
+    {
+      "id": "booking-akaroa",
+      "type": "accommodation",
+      "name": "Akaroa房车营地",
+      "status": "pending"
+    }
+  ],
+  "ticketPlanning": {
+    "statusStorage": "local",
+    "statusStorageNote": "门票状态默认只保存在当前浏览器。",
+    "items": [
+      {
+        "id": "ticket-dark-sky",
+        "day": 3,
+        "name": "Dark Sky Project 星空体验",
+        "requirement": "advance-recommended",
+        "status": "candidate",
+        "guidance": "建议提前查看12月6日场次；幼儿可选择白天室内天文体验。",
+        "scheduleMatchTerms": [
+          "Dark Sky",
+          "星空"
+        ],
+        "officialUrl": "https://www.darkskyproject.co.nz/experiences-booking-landing-page/"
+      },
+      {
+        "id": "ticket-tekapo-springs",
+        "day": 3,
+        "name": "Tekapo Springs 星空体验",
+        "requirement": "advance-recommended",
+        "status": "candidate",
+        "guidance": "与Dark Sky二选一，按天气和孩子作息决定。",
+        "scheduleMatchTerms": [
+          "Tekapo Springs",
+          "星空"
+        ],
+        "officialUrl": "https://tekaposprings.co.nz/bookings/"
+      },
+      {
+        "id": "ticket-puzzling-world",
+        "day": 5,
+        "name": "Puzzling World",
+        "requirement": "needs-confirmation",
+        "status": "candidate",
+        "guidance": "现场或官网确认门票和适合幼儿的区域。",
+        "scheduleMatchTerms": [
+          "Puzzling World"
+        ],
+        "officialUrl": "https://www.puzzlingworld.co.nz/prices-and-deals/"
+      },
+      {
+        "id": "ticket-wanaka-cruise",
+        "day": 5,
+        "name": "Lake Wānaka短途游船",
+        "requirement": "advance-recommended",
+        "status": "candidate",
+        "guidance": "班次和天气相关，确认后再锁定。",
+        "scheduleMatchTerms": [
+          "游船",
+          "Lake Wānaka"
+        ],
+        "officialUrl": "https://www.wanakacruises.co.nz/experiences/cruises/"
+      },
+      {
+        "id": "ticket-skyline",
+        "day": 7,
+        "name": "Skyline Queenstown Gondola / Stratosfare",
+        "requirement": "advance-recommended",
+        "status": "candidate",
+        "guidance": "建议提前查实时余票；Skyline官网提示餐厅和星空活动按预约情况安排。",
+        "scheduleMatchTerms": [
+          "Skyline",
+          "Gondola",
+          "Stratosfare"
+        ],
+        "officialUrl": "https://queenstown.skyline.co.nz/book-now/"
+      },
+      {
+        "id": "ticket-queenstown-cruise",
+        "day": 7,
+        "name": "Queenstown湖上游船",
+        "requirement": "advance-recommended",
+        "status": "candidate",
+        "guidance": "选择班次后再确认，预留幼儿午睡时间。",
+        "scheduleMatchTerms": [
+          "游船",
+          "湖上"
+        ],
+        "officialUrl": "https://www.realnz.com/en/experiences/day-cruises/queenstown-lake-cruise"
+      },
+      {
+        "id": "ticket-pukekura",
+        "day": 10,
+        "name": "Blue Penguins Pukekura",
+        "requirement": "advance-required",
+        "status": "candidate",
+        "guidance": "官方提示经常提前数周或数月售罄，确认Dunedin住宿后优先预订。",
+        "scheduleMatchTerms": [
+          "Blue Penguins",
+          "企鹅"
+        ],
+        "officialUrl": "https://www.bluepenguins.co.nz/book-your-tour"
+      },
+      {
+        "id": "ticket-albatross",
+        "day": 10,
+        "name": "Royal Albatross Centre",
+        "requirement": "advance-recommended",
+        "status": "candidate",
+        "guidance": "与企鹅活动二选一，按孩子状态决定。",
+        "scheduleMatchTerms": [
+          "Royal Albatross",
+          "信天翁"
+        ],
+        "officialUrl": "https://fareharbor.com/embeds/book/albatross/?button-tags=BNB&full-items=yes"
+      },
+      {
+        "id": "ticket-oamaru-penguins",
+        "day": 12,
+        "name": "Ōamaru Blue Penguin Colony晚间观赏",
+        "requirement": "advance-required",
+        "status": "candidate",
+        "guidance": "需要购买当天有效门票；晚间观赏时间随日落变化，2岁半幼儿可能较晚。",
+        "scheduleMatchTerms": [
+          "Oamaru Blue Penguin",
+          "蓝企鹅"
+        ],
+        "officialUrl": "https://www.penguins.co.nz/visit/evening-viewing/"
+      },
+      {
+        "id": "ticket-akaroa-cruise",
+        "day": 12,
+        "name": "Akaroa Harbour Nature Cruise",
+        "requirement": "advance-recommended",
+        "status": "candidate",
+        "guidance": "需要查看班次、登船地点和天气；确认营地后再预约。",
+        "scheduleMatchTerms": [
+          "Akaroa Harbour",
+          "Nature Cruise",
+          "游船"
+        ],
+        "officialUrl": "https://www.akaroanaturecruise.co.nz/booknow"
+      }
+    ]
+  },
+  "preTrip": {
+    "packingItems": [],
+    "preparationsExplicitlyMentioned": [],
+    "missingNote": "酒店名称、Dunedin/Oamaru/Akaroa营地、餐厅预订和候选活动门票仍待补充或现场选择。"
+  },
+  "mapLinks": {
+    "providedGoogleMapsLinks": [],
+    "note": "地点和餐厅均使用Google Maps搜索导航。餐厅是候选项，现场选择。",
+    "cityLevelNavigationDisabled": false,
+    "navigationPolicy": {
+      "noNavigationTypes": [
+        "flight",
+        "note",
+        "rest"
+      ],
+      "selfNavigationTypes": [
+        "drive",
+        "return",
+        "transfer",
+        "check-in",
+        "check-out",
+        "restaurant",
+        "attraction",
+        "walk",
+        "hike"
+      ]
+    },
+    "navigationPlaces": [
+      {
+        "id": "christchurch",
+        "label": "基督城",
+        "query": "Christchurch, Christchurch, New Zealand",
+        "matchTerms": [
+          "Christchurch",
+          "基督城"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "tekapo",
+        "label": "Tekapo",
+        "query": "Lake Tekapo, Lake Tekapo, New Zealand",
+        "matchTerms": [
+          "Lake Tekapo",
+          "Tekapo"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "pukaki",
+        "label": "Lake Pukaki",
+        "query": "Lake Pukaki, Mackenzie Basin, New Zealand",
+        "matchTerms": [
+          "Lake Pukaki",
+          "Lake Pukaki"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "wanaka",
+        "label": "瓦纳卡",
+        "query": "Wānaka, Wānaka, New Zealand",
+        "matchTerms": [
+          "Wānaka",
+          "瓦纳卡"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "queenstown",
+        "label": "皇后镇",
+        "query": "Queenstown, Queenstown, New Zealand",
+        "matchTerms": [
+          "Queenstown",
+          "皇后镇"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "dunedin",
+        "label": "但尼丁",
+        "query": "Dunedin, Dunedin, New Zealand",
+        "matchTerms": [
+          "Dunedin",
+          "但尼丁"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "oamaru",
+        "label": "奥马鲁",
+        "query": "Ōamaru, Ōamaru, New Zealand",
+        "matchTerms": [
+          "Ōamaru",
+          "奥马鲁"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "akaroa",
+        "label": "阿卡罗阿",
+        "query": "Akaroa, Akaroa, New Zealand",
+        "matchTerms": [
+          "Akaroa",
+          "阿卡罗阿"
+        ],
+        "priority": 2
+      },
+      {
+        "id": "restaurant-little-high-eatery",
+        "label": "Little High Eatery",
+        "query": "Little High Eatery, Christchurch, New Zealand",
+        "matchTerms": [
+          "Little High Eatery"
+        ],
+        "priority": 3
+      },
+      {
+        "id": "restaurant-riverside-market",
+        "label": "Riverside Market",
+        "query": "Riverside Market, Christchurch, New Zealand",
+        "matchTerms": [
+          "Riverside Market"
+        ],
+        "priority": 3
+      },
+      {
+        "id": "restaurant-base-woodfired-pizza-christchurch",
+        "label": "Base Woodfired Pizza Christchurch",
+        "query": "Base Woodfired Pizza Christchurch, Christchurch, New Zealand",
+        "matchTerms": [
+          "Base Woodfired Pizza Christchurch"
+        ],
+        "priority": 3
+      },
+      {
+        "id": "restaurant-blue-lake-eatery-and-bar",
+        "label": "Blue Lake Eatery & Bar",
+        "query": "Blue Lake Eatery & Bar, Lake Tekapo, New Zealand",
+        "matchTerms": [
+          "Blue Lake Eatery & Bar"
+        ],
+        "priority": 3
+      },
+      {
+        "id": "restaurant-kohan-japanese-restaurant",
+        "label": "Kohan Japanese Restaurant",
+        "query": "Kohan Japanese Restaurant, Lake Tekapo, New Zealand",
+        "matchTerms": [
+          "Kohan Japanese Restaurant"
+        ],
+        "priority": 3
+      },
+      {
+        "id": "restaurant-mackenzies-bar-and-grill",
+        "label": "Mackenzies Bar & Grill",
+        "query": "Mackenzies Bar & Grill, Lake Tekapo, New Zealand",
+        "matchTerms": [
+          "Mackenzies Bar & Grill"
+        ],
+        "priority": 3
+      },
+      {
+        "id": "restaurant-25-degrees-burger-bar",
+        "label": "25 Degrees Burger Bar",
+        "query": "25 Degrees Burger Bar, Lake Tekapo, New Zealand",
+        "matchTerms": [
+          "25 Degrees Burger Bar"
+        ],
+        "priority": 3
+      },
+      {
+        "id": "restaurant-big-fig",
+        "label": "Big Fig",
+        "query": "Big Fig, Wānaka, New Zealand",
+        "matchTerms": [
+          "Big Fig"
+        ],
+        "priority": 3
+      },
+      {
+        "id": "restaurant-kai-whakapai",
+        "label": "Kai Whakapai",
+        "query": "Kai Whakapai, Wānaka, New Zealand",
+        "matchTerms": [
+          "Kai Whakapai"
+        ],
+        "priority": 3
+      },
+      {
+        "id": "restaurant-federal-diner",
+        "label": "Federal Diner",
+        "query": "Federal Diner, Wānaka, New Zealand",
+        "matchTerms": [
+          "Federal Diner"
+        ],
+        "priority": 3
+      },
+      {
+        "id": "restaurant-kika",
+        "label": "Kika",
+        "query": "Kika, Wānaka, New Zealand",
+        "matchTerms": [
+          "Kika"
+        ],
+        "priority": 3
+      },
+      {
+        "id": "restaurant-blue-kanu",
+        "label": "Blue Kanu",
+        "query": "Blue Kanu, Queenstown, New Zealand",
+        "matchTerms": [
+          "Blue Kanu"
+        ],
+        "priority": 3
+      },
+      {
+        "id": "restaurant-flame-bar-and-grill",
+        "label": "Flame Bar and Grill",
+        "query": "Flame Bar and Grill, Queenstown, New Zealand",
+        "matchTerms": [
+          "Flame Bar and Grill"
+        ],
+        "priority": 3
+      },
+      {
+        "id": "restaurant-fergburger",
+        "label": "Fergburger",
+        "query": "Fergburger, Queenstown, New Zealand",
+        "matchTerms": [
+          "Fergburger"
+        ],
+        "priority": 3
+      },
+      {
+        "id": "restaurant-eriks-fish-and-chips",
+        "label": "Erik’s Fish and Chips",
+        "query": "Erik’s Fish and Chips, Queenstown, New Zealand",
+        "matchTerms": [
+          "Erik’s Fish and Chips"
+        ],
+        "priority": 3
+      },
+      {
+        "id": "restaurant-the-esplanade",
+        "label": "The Esplanade",
+        "query": "The Esplanade, Dunedin, New Zealand",
+        "matchTerms": [
+          "The Esplanade"
+        ],
+        "priority": 3
+      },
+      {
+        "id": "restaurant-no.-7-balmac",
+        "label": "No. 7 Balmac",
+        "query": "No. 7 Balmac, Dunedin, New Zealand",
+        "matchTerms": [
+          "No. 7 Balmac"
+        ],
+        "priority": 3
+      },
+      {
+        "id": "restaurant-ironic-cafe-and-bar",
+        "label": "Ironic Cafe & Bar",
+        "query": "Ironic Cafe & Bar, Dunedin, New Zealand",
+        "matchTerms": [
+          "Ironic Cafe & Bar"
+        ],
+        "priority": 3
+      },
+      {
+        "id": "restaurant-emersons-taproom-restaurant",
+        "label": "Emerson’s Taproom Restaurant",
+        "query": "Emerson’s Taproom Restaurant, Dunedin, New Zealand",
+        "matchTerms": [
+          "Emerson’s Taproom Restaurant"
+        ],
+        "priority": 3
+      },
+      {
+        "id": "restaurant-cucina",
+        "label": "Cucina",
+        "query": "Cucina, Ōamaru, New Zealand",
+        "matchTerms": [
+          "Cucina"
+        ],
+        "priority": 3
+      },
+      {
+        "id": "restaurant-riverstone-kitchen",
+        "label": "Riverstone Kitchen",
+        "query": "Riverstone Kitchen, Ōamaru, New Zealand",
+        "matchTerms": [
+          "Riverstone Kitchen"
+        ],
+        "priority": 3
+      },
+      {
+        "id": "restaurant-scampis-seafood",
+        "label": "Scampi’s Seafood",
+        "query": "Scampi’s Seafood, Ōamaru, New Zealand",
+        "matchTerms": [
+          "Scampi’s Seafood"
+        ],
+        "priority": 3
+      },
+      {
+        "id": "restaurant-the-criterion-hotel",
+        "label": "The Criterion Hotel",
+        "query": "The Criterion Hotel, Ōamaru, New Zealand",
+        "matchTerms": [
+          "The Criterion Hotel"
+        ],
+        "priority": 3
+      },
+      {
+        "id": "restaurant-bully-hayes-restaurant-and-bar",
+        "label": "Bully Hayes Restaurant & Bar",
+        "query": "Bully Hayes Restaurant & Bar, Akaroa, New Zealand",
+        "matchTerms": [
+          "Bully Hayes Restaurant & Bar"
+        ],
+        "priority": 3
+      },
+      {
+        "id": "restaurant-lescargot-rouge-deli-café",
+        "label": "L’Escargot Rouge Deli Café",
+        "query": "L’Escargot Rouge Deli Café, Akaroa, New Zealand",
+        "matchTerms": [
+          "L’Escargot Rouge Deli Café"
+        ],
+        "priority": 3
+      },
+      {
+        "id": "restaurant-ma-maison",
+        "label": "Ma Maison",
+        "query": "Ma Maison, Akaroa, New Zealand",
+        "matchTerms": [
+          "Ma Maison"
+        ],
+        "priority": 3
+      },
+      {
+        "id": "restaurant-the-common",
+        "label": "The Common",
+        "query": "The Common, Akaroa, New Zealand",
+        "matchTerms": [
+          "The Common"
+        ],
+        "priority": 3
+      },
+      {
+        "id": "playground-tekapo-lakefront",
+        "label": "Tekapo湖畔儿童 playground",
+        "query": "Lake Tekapo Playground, Lake Tekapo, New Zealand",
+        "url": "https://www.google.com/maps/search/?api=1&query=Lake+Tekapo+Playground%2C+Lake+Tekapo%2C+New+Zealand",
+        "matchTerms": [
+          "Tekapo湖畔儿童playground",
+          "Tekapo lakefront playground"
+        ],
+        "priority": 4
+      },
+      {
+        "id": "playground-wanaka-rotary",
+        "label": "Wānaka Lakefront Rotary Playground",
+        "query": "Wānaka Lakefront Rotary Playground, Wanaka, New Zealand",
+        "url": "https://www.google.com/maps/search/?api=1&query=W%C4%81naka+Lakefront+Rotary+Playground%2C+Wanaka%2C+New+Zealand",
+        "matchTerms": [
+          "Wānaka Lakefront Rotary Playground",
+          "Wanaka Lakefront Rotary Playground"
+        ],
+        "priority": 4
+      },
+      {
+        "id": "playground-queenstown-gardens",
+        "label": "Queenstown Gardens Playground",
+        "query": "Queenstown Gardens Playground, Queenstown, New Zealand",
+        "url": "https://www.google.com/maps/search/?api=1&query=Queenstown+Gardens+Playground%2C+Queenstown%2C+New+Zealand",
+        "matchTerms": [
+          "Queenstown Gardens Playground"
+        ],
+        "priority": 4
+      },
+      {
+        "id": "playground-queenstown-bathhouse",
+        "label": "Bathhouse Playground",
+        "query": "Bathhouse Playground, Queenstown, New Zealand",
+        "url": "https://www.google.com/maps/search/?api=1&query=Bathhouse+Playground%2C+Queenstown%2C+New+Zealand",
+        "matchTerms": [
+          "Bathhouse Playground"
+        ],
+        "priority": 4
+      },
+      {
+        "id": "playground-queenstown-st-omer",
+        "label": "St Omer Park",
+        "query": "St Omer Park, Queenstown, New Zealand",
+        "url": "https://www.google.com/maps/search/?api=1&query=St+Omer+Park%2C+Queenstown%2C+New+Zealand",
+        "matchTerms": [
+          "St Omer Park"
+        ],
+        "priority": 4
+      },
+      {
+        "id": "playground-dunedin-botanic",
+        "label": "Dunedin Botanic Garden Play Trail",
+        "query": "Dunedin Botanic Garden Playground, Dunedin, New Zealand",
+        "url": "https://www.google.com/maps/search/?api=1&query=Dunedin+Botanic+Garden+Playground%2C+Dunedin%2C+New+Zealand",
+        "matchTerms": [
+          "Dunedin Botanic Garden Play Trail",
+          "Botanic Garden Play Trail"
+        ],
+        "priority": 4
+      },
+      {
+        "id": "playground-dunedin-arthur",
+        "label": "Arthur Street Playground",
+        "query": "Arthur Street Playground, Dunedin, New Zealand",
+        "url": "https://www.google.com/maps/search/?api=1&query=Arthur+Street+Playground%2C+Dunedin%2C+New+Zealand",
+        "matchTerms": [
+          "Arthur Street Playground"
+        ],
+        "priority": 4
+      },
+      {
+        "id": "playground-dunedin-marlow",
+        "label": "Marlow Park Playground",
+        "query": "Marlow Park Playground, Dunedin, New Zealand",
+        "url": "https://www.google.com/maps/search/?api=1&query=Marlow+Park+Playground%2C+Dunedin%2C+New+Zealand",
+        "matchTerms": [
+          "Marlow Park"
+        ],
+        "priority": 4
+      },
+      {
+        "id": "playground-oamaru-public-gardens",
+        "label": "Oamaru Public Gardens Playground",
+        "query": "Oamaru Public Gardens Playground, Oamaru, New Zealand",
+        "url": "https://www.google.com/maps/search/?api=1&query=Oamaru+Public+Gardens+Playground%2C+Oamaru%2C+New+Zealand",
+        "matchTerms": [
+          "Oamaru Public Gardens Playground"
+        ],
+        "priority": 4
+      },
+      {
+        "id": "playground-akaroa-garden-of-tane",
+        "label": "Garden of Tāne Playground",
+        "query": "Garden of Tane Playground, Akaroa, New Zealand",
+        "url": "https://www.google.com/maps/search/?api=1&query=Garden+of+Tane+Playground%2C+Akaroa%2C+New+Zealand",
+        "matchTerms": [
+          "Garden of Tāne",
+          "Garden of Tane"
+        ],
+        "priority": 4
+      }
+    ]
+  },
+  "issuesAndUncertainties": [
+    {
+      "id": "missing-christchurch-hotel",
+      "type": "accommodation",
+      "status": "pending",
+      "text": "12月4日基督城酒店名称和地址待补充。"
+    },
+    {
+      "id": "missing-late-camps",
+      "type": "accommodation",
+      "status": "pending",
+      "text": "Dunedin、Ōamaru、Akaroa营地尚未最终预订。"
+    },
+    {
+      "id": "candidate-restaurants",
+      "type": "restaurant",
+      "status": "candidate",
+      "text": "每日餐厅均为候选，未视为已预订。"
+    },
+    {
+      "id": "candidate-tickets",
+      "type": "ticket",
+      "status": "candidate",
+      "text": "Dark Sky、Skyline、企鹅观赏和Akaroa游船等活动均未购票。"
+    },
+    {
+      "id": "xiaohongshu-unavailable",
+      "type": "source",
+      "status": "pending",
+      "text": "小红书链接正文暂未成功读取，网页未引用其中的具体事实。"
+    },
+    {
+      "id": "single-driver",
+      "type": "driving",
+      "status": "confirmed",
+      "text": "订单按1位授权驾驶员安排。"
+    }
+  ],
+  "map": {
+    "schemaVersion": "1.0-lite",
+    "mapMode": "template-auto",
+    "templateId": "auto",
+    "disclaimer": "本图仅表达地点的相对方位与路线顺序，不代表真实比例或精确地理边界。",
+    "region": {
+      "id": "nz-south-island",
+      "label": "新西兰南岛",
+      "countryCode": "NZ"
+    },
+    "places": [
+      {
+        "id": "christchurch",
+        "countryCode": "NZ",
+        "geo": {
+          "lat": -43.5321,
+          "lng": 172.6362
+        }
+      },
+      {
+        "id": "tekapo",
+        "countryCode": "NZ",
+        "geo": {
+          "lat": -44.0046,
+          "lng": 170.4771
+        }
+      },
+      {
+        "id": "pukaki",
+        "countryCode": "NZ",
+        "geo": {
+          "lat": -44.1714,
+          "lng": 170.1331
+        }
+      },
+      {
+        "id": "wanaka",
+        "countryCode": "NZ",
+        "geo": {
+          "lat": -44.7002,
+          "lng": 169.132
+        }
+      },
+      {
+        "id": "queenstown",
+        "countryCode": "NZ",
+        "geo": {
+          "lat": -45.0312,
+          "lng": 168.6626
+        }
+      },
+      {
+        "id": "dunedin",
+        "countryCode": "NZ",
+        "geo": {
+          "lat": -45.8788,
+          "lng": 170.5028
+        }
+      },
+      {
+        "id": "oamaru",
+        "countryCode": "NZ",
+        "geo": {
+          "lat": -45.097,
+          "lng": 170.97
+        }
+      },
+      {
+        "id": "akaroa",
+        "countryCode": "NZ",
+        "geo": {
+          "lat": -43.804,
+          "lng": 172.968
+        }
+      }
+    ],
+    "routes": [
+      {
+        "day": 2,
+        "placeIds": [
+          "christchurch",
+          "tekapo"
+        ]
+      },
+      {
+        "day": 3,
+        "placeIds": [
+          "tekapo",
+          "pukaki",
+          "wanaka"
+        ]
+      },
+      {
+        "day": 4,
+        "placeIds": [
+          "wanaka",
+          "queenstown"
+        ]
+      },
+      {
+        "day": 5,
+        "placeIds": [
+          "queenstown",
+          "dunedin"
+        ]
+      },
+      {
+        "day": 6,
+        "placeIds": [
+          "dunedin",
+          "oamaru"
+        ]
+      },
+      {
+        "day": 7,
+        "placeIds": [
+          "oamaru",
+          "akaroa"
+        ]
+      },
+      {
+        "day": 8,
+        "placeIds": [
+          "akaroa",
+          "christchurch"
+        ]
+      }
+    ],
+    "dailyRoutes": [
+      {
+        "day": 2,
+        "placeIds": [
+          "christchurch",
+          "tekapo"
+        ]
+      },
+      {
+        "day": 3,
+        "placeIds": [
+          "tekapo",
+          "pukaki",
+          "wanaka"
+        ]
+      },
+      {
+        "day": 4,
+        "placeIds": [
+          "wanaka",
+          "queenstown"
+        ]
+      },
+      {
+        "day": 5,
+        "placeIds": [
+          "queenstown",
+          "dunedin"
+        ]
+      },
+      {
+        "day": 6,
+        "placeIds": [
+          "dunedin",
+          "oamaru"
+        ]
+      },
+      {
+        "day": 7,
+        "placeIds": [
+          "oamaru",
+          "akaroa"
+        ]
+      },
+      {
+        "day": 8,
+        "placeIds": [
+          "akaroa",
+          "christchurch"
+        ]
+      }
+    ],
+    "baseImage": "assets/maps/custom/nz-south-island-cartoon-geo.svg",
+    "projection": {
+      "type": "geo",
+      "bounds": {
+        "west": 166.466482,
+        "south": -46.681899,
+        "east": 174.326427,
+        "north": -40.50213
+      },
+      "padding": 112
+    }
+  },
+  "routeMap": {
+    "defaultRegionId": "nz-south-island",
+    "regions": [
+      {
+        "id": "nz-south-island",
+        "label": "新西兰南岛",
+        "countryCode": "NZ",
+        "scope": "template-schematic",
+        "mapMode": "frozen-template",
+        "templateId": "broad-riverland",
+        "mapModeReason": "east-west-route",
+        "mapModeMetrics": {
+          "placeCount": 8,
+          "geoPlaceCount": 8,
+          "widthKm": 340.7,
+          "heightKm": 260.48,
+          "spanKm": 368.11,
+          "averageNearestKm": 54.98,
+          "components": 1,
+          "largestLegKm": 214.05,
+          "jumpRatio": 2.17
+        },
+        "days": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "canvas": {
+          "width": 1448,
+          "height": 1086
+        },
+        "projection": {
+          "type": "geo",
+          "bounds": {
+            "west": 166.466482,
+            "south": -46.681899,
+            "east": 174.326427,
+            "north": -40.50213
+          },
+          "padding": 112
+        },
+        "baseImage": "assets/maps/custom/nz-south-island-cartoon-geo.svg",
+        "title": "新西兰南岛 · 旅行路线",
+        "ariaLabel": "新西兰南岛模板化旅行路线示意图，共7天",
+        "disclaimer": "本图仅表达地点的相对方位与路线顺序，不代表真实比例或精确地理边界。",
+        "heading": {
+          "text": "新西兰南岛",
+          "x": 33,
+          "y": 105,
+          "size": 40
+        },
+        "legend": {
+          "x": 35,
+          "y": 168,
+          "gap": 43
+        },
+        "annotations": [],
+        "routes": [
+          {
+            "day": 2,
+            "color": "#e77e22",
+            "placeIds": [
+              "christchurch",
+              "tekapo"
+            ],
+            "paths": [
+              "M1072.79 534.64 C952.7 527.6 838.4 550.0 736.56 600.55"
+            ],
+            "overviewPaths": [
+              "M1072.79 534.64 C952.7 527.6 838.4 550.0 736.56 600.55"
+            ]
+          },
+          {
+            "day": 3,
+            "color": "#618344",
+            "placeIds": [
+              "tekapo",
+              "pukaki",
+              "wanaka"
+            ],
+            "paths": [
+              "M736.56 600.55 C720.7 613.8 702.5 621.7 682.99 623.82 C622.6 633.3 569.6 658.4 527.09 697.58"
+            ],
+            "overviewPaths": [
+              "M736.56 600.55 C720.7 613.8 702.5 621.7 682.99 623.82 C622.6 633.3 569.6 658.4 527.09 697.58"
+            ]
+          },
+          {
+            "day": 4,
+            "color": "#209aaa",
+            "placeIds": [
+              "wanaka",
+              "queenstown"
+            ],
+            "paths": [
+              "M527.09 697.58 C497.6 706.0 472.8 721.7 453.99 743.75"
+            ],
+            "overviewPaths": [
+              "M527.09 697.58 C497.6 706.0 472.8 721.7 453.99 743.75"
+            ]
+          },
+          {
+            "day": 5,
+            "color": "#8865a5",
+            "placeIds": [
+              "queenstown",
+              "dunedin"
+            ],
+            "paths": [
+              "M453.99 743.75 C562.9 756.2 660.3 796.4 740.56 861.98"
+            ],
+            "overviewPaths": [
+              "M453.99 743.75 C562.9 756.2 660.3 796.4 740.56 861.98"
+            ]
+          },
+          {
+            "day": 6,
+            "color": "#df6185",
+            "placeIds": [
+              "dunedin",
+              "oamaru"
+            ],
+            "paths": [
+              "M740.56 861.98 C776.2 832.2 800.9 795.1 813.32 752.93"
+            ],
+            "overviewPaths": [
+              "M740.56 861.98 C776.2 832.2 800.9 795.1 813.32 752.93"
+            ]
+          },
+          {
+            "day": 7,
+            "color": "#397dc1",
+            "placeIds": [
+              "oamaru",
+              "akaroa"
+            ],
+            "paths": [
+              "M813.32 752.93 C904.1 665.7 1009.8 604.3 1124.46 572.57"
+            ],
+            "overviewPaths": [
+              "M813.32 752.93 C904.1 665.7 1009.8 604.3 1124.46 572.57"
+            ]
+          },
+          {
+            "day": 8,
+            "color": "#e77e22",
+            "placeIds": [
+              "akaroa",
+              "christchurch"
+            ],
+            "paths": [
+              "M1124.46 572.57 C1110.7 554.5 1093.1 541.6 1072.79 534.64"
+            ],
+            "overviewPaths": [
+              "M1124.46 572.57 C1110.7 554.5 1093.1 541.6 1072.79 534.64"
+            ]
+          }
+        ],
+        "places": [
+          {
+            "id": "christchurch",
+            "x": 1072.79,
+            "y": 534.64,
+            "originalX": 1072.79,
+            "originalY": 534.64,
+            "color": "#e77e22",
+            "tx": 1104.79,
+            "ty": 502.64,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "christchurch"
+            ],
+            "query": "christchurch 新西兰南岛",
+            "geo": {
+              "lat": -43.5321,
+              "lng": 172.6362
+            },
+            "days": [
+              2,
+              8
+            ]
+          },
+          {
+            "id": "tekapo",
+            "x": 736.56,
+            "y": 600.55,
+            "originalX": 736.56,
+            "originalY": 600.55,
+            "color": "#e77e22",
+            "tx": 704.56,
+            "ty": 568.55,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "tekapo"
+            ],
+            "query": "tekapo 新西兰南岛",
+            "geo": {
+              "lat": -44.0046,
+              "lng": 170.4771
+            },
+            "days": [
+              2,
+              3
+            ]
+          },
+          {
+            "id": "pukaki",
+            "x": 682.99,
+            "y": 623.82,
+            "originalX": 682.99,
+            "originalY": 623.82,
+            "color": "#618344",
+            "tx": 760.99,
+            "ty": 561.82,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "pukaki"
+            ],
+            "query": "pukaki 新西兰南岛",
+            "geo": {
+              "lat": -44.1714,
+              "lng": 170.1331
+            },
+            "days": [
+              3
+            ]
+          },
+          {
+            "id": "wanaka",
+            "x": 527.09,
+            "y": 697.58,
+            "originalX": 527.09,
+            "originalY": 697.58,
+            "color": "#618344",
+            "tx": 449.09,
+            "ty": 635.58,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "wanaka"
+            ],
+            "query": "wanaka 新西兰南岛",
+            "geo": {
+              "lat": -44.7002,
+              "lng": 169.132
+            },
+            "days": [
+              3,
+              4
+            ]
+          },
+          {
+            "id": "queenstown",
+            "x": 453.99,
+            "y": 743.75,
+            "originalX": 453.99,
+            "originalY": 743.75,
+            "color": "#209aaa",
+            "tx": 315.99,
+            "ty": 845.75,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "queenstown"
+            ],
+            "query": "queenstown 新西兰南岛",
+            "geo": {
+              "lat": -45.0312,
+              "lng": 168.6626
+            },
+            "days": [
+              4,
+              5
+            ]
+          },
+          {
+            "id": "dunedin",
+            "x": 740.56,
+            "y": 861.98,
+            "originalX": 740.56,
+            "originalY": 861.98,
+            "color": "#8865a5",
+            "tx": 878.56,
+            "ty": 963.98,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "dunedin"
+            ],
+            "query": "dunedin 新西兰南岛",
+            "geo": {
+              "lat": -45.8788,
+              "lng": 170.5028
+            },
+            "days": [
+              5,
+              6
+            ]
+          },
+          {
+            "id": "oamaru",
+            "x": 813.32,
+            "y": 752.93,
+            "originalX": 813.32,
+            "originalY": 752.93,
+            "color": "#df6185",
+            "tx": 845.32,
+            "ty": 720.93,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "oamaru"
+            ],
+            "query": "oamaru 新西兰南岛",
+            "geo": {
+              "lat": -45.097,
+              "lng": 170.97
+            },
+            "days": [
+              6,
+              7
+            ]
+          },
+          {
+            "id": "akaroa",
+            "x": 1124.46,
+            "y": 572.57,
+            "originalX": 1124.46,
+            "originalY": 572.57,
+            "color": "#397dc1",
+            "tx": 1092.46,
+            "ty": 622.57,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "akaroa"
+            ],
+            "query": "akaroa 新西兰南岛",
+            "geo": {
+              "lat": -43.804,
+              "lng": 172.968
+            },
+            "days": [
+              7,
+              8
+            ]
+          }
+        ],
+        "overviewPlaceIds": [
+          "christchurch",
+          "tekapo",
+          "pukaki",
+          "wanaka",
+          "queenstown",
+          "dunedin",
+          "oamaru",
+          "akaroa"
+        ],
+        "dailyLayouts": {
+          "2": {
+            "places": [
+              "christchurch",
+              "tekapo"
+            ],
+            "labels": {
+              "christchurch": {
+                "x": 1104.79,
+                "y": 502.64,
+                "anchor": "start"
+              },
+              "tekapo": {
+                "x": 704.56,
+                "y": 568.55,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 904.67,
+                "y": 567.6
+              }
+            ]
+          },
+          "3": {
+            "places": [
+              "tekapo",
+              "pukaki",
+              "wanaka"
+            ],
+            "labels": {
+              "tekapo": {
+                "x": 704.56,
+                "y": 568.55,
+                "anchor": "end"
+              },
+              "pukaki": {
+                "x": 760.99,
+                "y": 561.82,
+                "anchor": "start"
+              },
+              "wanaka": {
+                "x": 449.09,
+                "y": 635.58,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 709.77,
+                "y": 612.18
+              },
+              {
+                "items": [],
+                "x": 605.04,
+                "y": 660.7
+              }
+            ]
+          },
+          "4": {
+            "places": [
+              "wanaka",
+              "queenstown"
+            ],
+            "labels": {
+              "wanaka": {
+                "x": 449.09,
+                "y": 635.58,
+                "anchor": "end"
+              },
+              "queenstown": {
+                "x": 315.99,
+                "y": 845.75,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 490.54,
+                "y": 720.66
+              }
+            ]
+          },
+          "5": {
+            "places": [
+              "queenstown",
+              "dunedin"
+            ],
+            "labels": {
+              "queenstown": {
+                "x": 315.99,
+                "y": 845.75,
+                "anchor": "end"
+              },
+              "dunedin": {
+                "x": 878.56,
+                "y": 963.98,
+                "anchor": "start"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 597.27,
+                "y": 802.87
+              }
+            ]
+          },
+          "6": {
+            "places": [
+              "dunedin",
+              "oamaru"
+            ],
+            "labels": {
+              "dunedin": {
+                "x": 878.56,
+                "y": 963.98,
+                "anchor": "start"
+              },
+              "oamaru": {
+                "x": 845.32,
+                "y": 720.93,
+                "anchor": "start"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 776.94,
+                "y": 807.45
+              }
+            ]
+          },
+          "7": {
+            "places": [
+              "oamaru",
+              "akaroa"
+            ],
+            "labels": {
+              "oamaru": {
+                "x": 845.32,
+                "y": 720.93,
+                "anchor": "start"
+              },
+              "akaroa": {
+                "x": 1092.46,
+                "y": 622.57,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 968.89,
+                "y": 662.75
+              }
+            ]
+          },
+          "8": {
+            "places": [
+              "akaroa",
+              "christchurch"
+            ],
+            "labels": {
+              "akaroa": {
+                "x": 1092.46,
+                "y": 622.57,
+                "anchor": "end"
+              },
+              "christchurch": {
+                "x": 1104.79,
+                "y": 502.64,
+                "anchor": "start"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 1098.63,
+                "y": 553.61
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
