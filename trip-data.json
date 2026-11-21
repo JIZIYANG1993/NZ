@@ -138,7 +138,9 @@
       "checkOut": "2026-12-07",
       "status": "confirmed",
       "siteType": "Standard Powered Site",
-      "guests": 3
+      "guests": 3,
+      "address": "2 Lakeside Drive, Lake Tekapo",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Lakes%20Edge%20Holiday%20Park%2C%202%20Lakeside%20Drive%2C%20Lake%20Tekapo%2C%20New%20Zealand"
     },
     {
       "id": "acc-glendhu",
@@ -148,7 +150,9 @@
       "checkOut": "2026-12-09",
       "status": "confirmed",
       "siteType": "Lake View Grass Powered Site",
-      "guests": 3
+      "guests": 3,
+      "address": "1127 Mount Aspiring Road, Wānaka",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Hampshire%20Holiday%20Parks%20Glendhu%20Bay%2C%201127%20Mount%20Aspiring%20Road%2C%20W%C4%81naka%2C%20New%20Zealand"
     },
     {
       "id": "acc-queenstown-lakeview",
@@ -158,7 +162,9 @@
       "checkOut": "2026-12-11",
       "status": "confirmed",
       "siteType": "Powered Site",
-      "guests": 3
+      "guests": 3,
+      "address": "4 Cemetery Road, Queenstown",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Hampshire%20Holiday%20Parks%20Queenstown%20Lakeview%2C%204%20Cemetery%20Road%2C%20Queenstown%2C%20New%20Zealand"
     },
     {
       "id": "acc-driftaway",
@@ -168,7 +174,9 @@
       "checkOut": "2026-12-12",
       "status": "confirmed",
       "siteType": "Premium Lake View Powered Site",
-      "guests": 3
+      "guests": 3,
+      "address": "11 Lake Avenue, Frankton, Queenstown",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Driftaway%20Queenstown%2C%2011%20Lake%20Avenue%2C%20Frankton%2C%20Queenstown%2C%20New%20Zealand"
     },
     {
       "id": "acc-dunedin",
@@ -386,7 +394,7 @@
           "type": "check-in",
           "text": "Lakes Edge Holiday Park入住，订单确认住12月5日至7日。",
           "placeIds": [
-            "tekapo"
+            "camp-tekapo"
           ]
         },
         {
@@ -474,7 +482,7 @@
           "type": "check-out",
           "text": "Tekapo营地退房，整理房车。",
           "placeIds": [
-            "tekapo"
+            "camp-tekapo"
           ]
         },
         {
@@ -503,7 +511,7 @@
           "type": "check-in",
           "text": "Hampshire Holiday Parks Glendhu Bay入住，订单确认住12月7日至9日。",
           "placeIds": [
-            "wanaka"
+            "camp-glendhu"
           ]
         },
         {
@@ -563,8 +571,9 @@
           "id": "d5-ticket",
           "time": "14:30",
           "type": "attraction",
-          "text": "可选Puzzling World或Lake Wānaka短途游船，门票按现场和预约情况决定。",
+          "text": "下午备选三选一：Hook Wānaka 钓三文鱼、Puzzling World 或 Lake Wānaka 短途游船。Hook 钓竿不接受预订，最后租竿 16:30；幼儿靠近水边须全程看护。",
           "placeIds": [
+            "hook-wanaka",
             "wanaka"
           ],
           "ticketIds": [
@@ -590,7 +599,7 @@
           "type": "check-out",
           "text": "Glendhu Bay退房，补水并检查儿童用品。",
           "placeIds": [
-            "wanaka"
+            "camp-glendhu"
           ]
         },
         {
@@ -609,7 +618,7 @@
           "type": "check-in",
           "text": "Hampshire Holiday Parks Queenstown Lakeview入住，订单确认住12月9日至11日。",
           "placeIds": [
-            "queenstown"
+            "camp-queenstown-lakeview"
           ]
         },
         {
@@ -706,7 +715,7 @@
           "type": "check-out",
           "text": "Hampshire Queenstown Lakeview退房。",
           "placeIds": [
-            "queenstown"
+            "camp-queenstown-lakeview"
           ]
         },
         {
@@ -722,7 +731,7 @@
           "id": "d8-food",
           "time": "12:30",
           "type": "restaurant",
-          "text": "餐厅候选（现场选择）：Blue Kanu、Flame Bar and Grill、Fergburger、Erik’s Fish and Chips",
+          "text": "计划午餐：Fergburger 大脸汉堡（现场排队）；备选餐厅：Blue Kanu、Flame Bar and Grill、Erik’s Fish and Chips。",
           "placeIds": [
             "restaurant-blue-kanu",
             "restaurant-flame-bar-and-grill",
@@ -736,7 +745,7 @@
           "type": "check-in",
           "text": "Driftaway Queenstown入住，订单确认住12月11日至12日。",
           "placeIds": [
-            "queenstown"
+            "camp-driftaway"
           ]
         }
       ]
@@ -1130,6 +1139,47 @@
         "lng": 172.968
       },
       "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Akaroa%2C+Akaroa%2C+New+Zealand"
+    },
+    {
+      "id": "camp-tekapo",
+      "name": "Lakes Edge Holiday Park",
+      "cityOrArea": "Lake Tekapo",
+      "countryCode": "NZ",
+      "address": "2 Lakeside Drive, Lake Tekapo",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Lakes%20Edge%20Holiday%20Park%2C%202%20Lakeside%20Drive%2C%20Lake%20Tekapo%2C%20New%20Zealand"
+    },
+    {
+      "id": "camp-glendhu",
+      "name": "Hampshire Holiday Parks Glendhu Bay",
+      "cityOrArea": "Wānaka",
+      "countryCode": "NZ",
+      "address": "1127 Mount Aspiring Road, Wānaka",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Hampshire%20Holiday%20Parks%20Glendhu%20Bay%2C%201127%20Mount%20Aspiring%20Road%2C%20W%C4%81naka%2C%20New%20Zealand"
+    },
+    {
+      "id": "camp-queenstown-lakeview",
+      "name": "Hampshire Holiday Parks Queenstown Lakeview",
+      "cityOrArea": "Queenstown",
+      "countryCode": "NZ",
+      "address": "4 Cemetery Road, Queenstown",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Hampshire%20Holiday%20Parks%20Queenstown%20Lakeview%2C%204%20Cemetery%20Road%2C%20Queenstown%2C%20New%20Zealand"
+    },
+    {
+      "id": "camp-driftaway",
+      "name": "Driftaway Queenstown",
+      "cityOrArea": "Queenstown",
+      "countryCode": "NZ",
+      "address": "11 Lake Avenue, Frankton, Queenstown",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Driftaway%20Queenstown%2C%2011%20Lake%20Avenue%2C%20Frankton%2C%20Queenstown%2C%20New%20Zealand"
+    },
+    {
+      "id": "hook-wanaka",
+      "name": "Hook Wānaka",
+      "cityOrArea": "Wānaka",
+      "countryCode": "NZ",
+      "address": "49 Monteith Road, Wānaka 9382",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Hook%20W%C4%81naka%2C%2049%20Monteith%20Road%2C%20W%C4%81naka%209382%2C%20New%20Zealand",
+      "officialUrl": "https://hookwanaka.nz/contact/"
     }
   ],
   "restaurants": [
@@ -1256,8 +1306,8 @@
       "city": "Queenstown",
       "style": "皇后镇代表性汉堡",
       "status": "candidate",
-      "selectionNote": "现场选择，出发前核对营业时间和节假日安排",
-      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Fergburger%2C+Queenstown%2C+New+Zealand"
+      "selectionNote": "12月11日计划午餐；现场排队，出发前核对营业时间。",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Fergburger%2C%2042%20Shotover%20Street%2C%20Queenstown%2C%20New%20Zealand"
     },
     {
       "id": "restaurant-eriks-fish-and-chips",
@@ -1390,28 +1440,32 @@
       "type": "accommodation",
       "name": "Lakes Edge Holiday Park",
       "status": "confirmed",
-      "dateRange": "2026-12-05至2026-12-07"
+      "dateRange": "2026-12-05至2026-12-07",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Lakes%20Edge%20Holiday%20Park%2C%202%20Lakeside%20Drive%2C%20Lake%20Tekapo%2C%20New%20Zealand"
     },
     {
       "id": "booking-glendhu",
       "type": "accommodation",
       "name": "Hampshire Holiday Parks Glendhu Bay",
       "status": "confirmed",
-      "dateRange": "2026-12-07至2026-12-09"
+      "dateRange": "2026-12-07至2026-12-09",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Hampshire%20Holiday%20Parks%20Glendhu%20Bay%2C%201127%20Mount%20Aspiring%20Road%2C%20W%C4%81naka%2C%20New%20Zealand"
     },
     {
       "id": "booking-queenstown-lakeview",
       "type": "accommodation",
       "name": "Hampshire Holiday Parks Queenstown Lakeview",
       "status": "confirmed",
-      "dateRange": "2026-12-09至2026-12-11"
+      "dateRange": "2026-12-09至2026-12-11",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Hampshire%20Holiday%20Parks%20Queenstown%20Lakeview%2C%204%20Cemetery%20Road%2C%20Queenstown%2C%20New%20Zealand"
     },
     {
       "id": "booking-driftaway",
       "type": "accommodation",
       "name": "Driftaway Queenstown",
       "status": "confirmed",
-      "dateRange": "2026-12-11至2026-12-12"
+      "dateRange": "2026-12-11至2026-12-12",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Driftaway%20Queenstown%2C%2011%20Lake%20Avenue%2C%20Frankton%2C%20Queenstown%2C%20New%20Zealand"
     },
     {
       "id": "booking-dunedin",
@@ -1797,11 +1851,12 @@
       {
         "id": "restaurant-fergburger",
         "label": "Fergburger",
-        "query": "Fergburger, Queenstown, New Zealand",
+        "query": "Fergburger, 42 Shotover Street, Queenstown, New Zealand",
         "matchTerms": [
           "Fergburger"
         ],
-        "priority": 3
+        "priority": 3,
+        "url": "https://www.google.com/maps/search/?api=1&query=Fergburger%2C%2042%20Shotover%20Street%2C%20Queenstown%2C%20New%20Zealand"
       },
       {
         "id": "restaurant-eriks-fish-and-chips",
@@ -2021,6 +2076,59 @@
         "matchTerms": [
           "Garden of Tāne",
           "Garden of Tane"
+        ],
+        "priority": 4
+      },
+      {
+        "id": "hook-wanaka",
+        "label": "Hook Wānaka",
+        "query": "Hook Wānaka, 49 Monteith Road, Wānaka 9382, New Zealand",
+        "url": "https://www.google.com/maps/search/?api=1&query=Hook%20W%C4%81naka%2C%2049%20Monteith%20Road%2C%20W%C4%81naka%209382%2C%20New%20Zealand",
+        "matchTerms": [
+          "Hook Wānaka"
+        ],
+        "priority": 4
+      },
+      {
+        "id": "camp-tekapo",
+        "label": "Lakes Edge Holiday Park",
+        "query": "Lakes Edge Holiday Park, 2 Lakeside Drive, Lake Tekapo, New Zealand",
+        "url": "https://www.google.com/maps/search/?api=1&query=Lakes%20Edge%20Holiday%20Park%2C%202%20Lakeside%20Drive%2C%20Lake%20Tekapo%2C%20New%20Zealand",
+        "matchTerms": [
+          "Lakes Edge Holiday Park",
+          "Tekapo营地"
+        ],
+        "priority": 4
+      },
+      {
+        "id": "camp-glendhu",
+        "label": "Hampshire Holiday Parks Glendhu Bay",
+        "query": "Hampshire Holiday Parks Glendhu Bay, 1127 Mount Aspiring Road, Wānaka, New Zealand",
+        "url": "https://www.google.com/maps/search/?api=1&query=Hampshire%20Holiday%20Parks%20Glendhu%20Bay%2C%201127%20Mount%20Aspiring%20Road%2C%20W%C4%81naka%2C%20New%20Zealand",
+        "matchTerms": [
+          "Hampshire Holiday Parks Glendhu Bay",
+          "Glendhu Bay退房"
+        ],
+        "priority": 4
+      },
+      {
+        "id": "camp-queenstown-lakeview",
+        "label": "Hampshire Holiday Parks Queenstown Lakeview",
+        "query": "Hampshire Holiday Parks Queenstown Lakeview, 4 Cemetery Road, Queenstown, New Zealand",
+        "url": "https://www.google.com/maps/search/?api=1&query=Hampshire%20Holiday%20Parks%20Queenstown%20Lakeview%2C%204%20Cemetery%20Road%2C%20Queenstown%2C%20New%20Zealand",
+        "matchTerms": [
+          "Hampshire Holiday Parks Queenstown Lakeview",
+          "Hampshire Queenstown Lakeview"
+        ],
+        "priority": 4
+      },
+      {
+        "id": "camp-driftaway",
+        "label": "Driftaway Queenstown",
+        "query": "Driftaway Queenstown, 11 Lake Avenue, Frankton, Queenstown, New Zealand",
+        "url": "https://www.google.com/maps/search/?api=1&query=Driftaway%20Queenstown%2C%2011%20Lake%20Avenue%2C%20Frankton%2C%20Queenstown%2C%20New%20Zealand",
+        "matchTerms": [
+          "Driftaway Queenstown"
         ],
         "priority": 4
       }

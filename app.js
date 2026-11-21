@@ -554,7 +554,7 @@ function navigationDestinations(item) {
     : catalogPlaces.length
       ? [...catalogPlaces, ...restaurants]
       : [...selectedExplicit, ...restaurants];
-  destinations = destinations.filter((place, index, all) => all.findIndex((candidate) => candidate.id === place.id) === index);
+  destinations = destinations.filter((place, index, all) => all.findIndex((candidate) => candidate.label === place.label) === index);
 
   if (policy.selfNavigationTypes.includes(item.type) && destinations.length > 1 && !specificExplicit.length) {
     destinations.sort((first, second) => second.matchIndex - first.matchIndex);
